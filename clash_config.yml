@@ -1,0 +1,384 @@
+mixed-port: 7890
+redir-port: 7892
+allow-lan: true
+mode: Rule
+log-level: silent
+external-controller: 0.0.0.0:9090
+secret: ''
+dns:
+  enable: true
+  ipv6: false
+  nameserver:
+    - 223.5.5.5
+    - 180.76.76.76
+    - 119.29.29.29
+    - 117.50.11.11
+    - 117.50.10.10
+    - 114.114.114.114
+    - https://dns.alidns.com/dns-query
+    - https://doh.360.cn/dns-query
+  fallback:
+    - 8.8.8.8
+    - tls://dns.rubyfish.cn:853
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+    - https://dns.rubyfish.cn/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+      - 127.0.0.1/32
+    domain:
+      - +.google.com
+      - +.facebook.com
+      - +.youtube.com
+      - +.xn--ngstr-lra8j.com
+      - +.google.cn
+      - +.googleapis.cn
+      - +.gvt1.com
+proxies:
+  - name: 有效期2027-09-01, 剩余 96.04 GB
+    type: trojan
+    server: iplc-hk-beta1.trojanwheel.com
+    port: 5001
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 香港-IPLC-HK-BETA1-流量倍率:1.0
+    type: trojan
+    server: iplc-hk-beta1.trojanwheel.com
+    port: 5001
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 香港-IPLC-HK-BETA2-流量倍率:1.0
+    type: trojan
+    server: iplc-hk-beta2.trojanwheel.com
+    port: 5002
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 香港-IPLC-HK-BETA3-流量倍率:1.0
+    type: trojan
+    server: iplc-hk-beta3.trojanwheel.com
+    port: 5003
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 香港-IPLC-HK-BETA4-流量倍率:1.0
+    type: trojan
+    server: iplc-hk-beta4.trojanwheel.com
+    port: 5004
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 香港-IPLC-HK-BETA5-流量倍率:1.0
+    type: trojan
+    server: iplc-hk-beta5.trojanwheel.com
+    port: 5005
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 爱沙尼亚-EE-1-流量倍率:0.1
+    type: trojan
+    server: ee-1.kamediorg.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 澳大利亚-AU-1-流量倍率:0.5
+    type: trojan
+    server: au-1.australiastudio.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 澳大利亚-AU-2-流量倍率:1.0
+    type: trojan
+    server: au-2.australiastudio.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 澳大利亚-AU-3-流量倍率:1.0
+    type: trojan
+    server: au-3.australiastudio.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 澳大利亚-AU-4-流量倍率:1.0
+    type: trojan
+    server: au-4.australiastudio.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 德国-DE-1-流量倍率:1.0
+    type: trojan
+    server: de-1.topeinstein.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 德国-DE-2-流量倍率:1.0
+    type: trojan
+    server: de-2.topeinstein.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 德国-DE-3-流量倍率:1.0
+    type: trojan
+    server: de-3.topeinstein.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 美国-US-1-流量倍率:1.5
+    type: trojan
+    server: us-1.regentgrandvalley.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 美国-US-2-流量倍率:1.0
+    type: trojan
+    server: us-2.regentgrandvalley.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 美国-US-3-流量倍率:1.0
+    type: trojan
+    server: us-3.regentgrandvalley.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 美国-US-4-流量倍率:1.0
+    type: trojan
+    server: us-4.regentgrandvalley.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 美国-US-5-流量倍率:1.0
+    type: trojan
+    server: us-5.regentgrandvalley.com
+    port: 5021
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 香港-HK-1-流量倍率:0.5
+    type: trojan
+    server: hk-1.victoriamitrepeak.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 香港-HK-2-流量倍率:0.5
+    type: trojan
+    server: hk-2.victoriamitrepeak.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 新加坡-SG-1-流量倍率:1.0
+    type: trojan
+    server: sg-1.victoriamitrepeak.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 新加坡-SG-2-流量倍率:1.0
+    type: trojan
+    server: sg-2.victoriamitrepeak.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 日本-TY-1-流量倍率:1.0
+    type: trojan
+    server: ty-1.rise-fuji.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 日本-TY-2-流量倍率:1.0
+    type: trojan
+    server: ty-2.rise-fuji.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 日本-TY-3-流量倍率:1.0
+    type: trojan
+    server: ty-3.rise-fuji.com
+    port: 5013
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 日本-TY-4-流量倍率:1.0
+    type: trojan
+    server: ty-4.rise-fuji.com
+    port: 5011
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 日本-OS-1-流量倍率:1.0
+    type: trojan
+    server: os-1.rise-fuji.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 日本-OS-2-流量倍率:1.0
+    type: trojan
+    server: os-2.rise-fuji.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 日本-OS-3-流量倍率:1.0
+    type: trojan
+    server: os-3.rise-fuji.com
+    port: 5012
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 荷兰-NL-1-流量倍率:1.0
+    type: trojan
+    server: nl-1.concert-geb.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 荷兰-NL-2-流量倍率:1.0
+    type: trojan
+    server: nl-2.concert-geb.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 荷兰-NL-3-流量倍率:1.0
+    type: trojan
+    server: nl-3.concert-geb.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 英国-UK-1-流量倍率:1.0
+    type: trojan
+    server: uk-1.fishchipsexpress.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 台湾-TW-1-流量倍率:1.0
+    type: trojan
+    server: tw-1.chianginc.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 台湾-TW-2-流量倍率:1.0
+    type: trojan
+    server: tw-2.chianginc.com
+    port: 443
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 美国-V6-US3-流量倍率:1.0
+    type: trojan
+    server: v6-us3.nigirocloud.com
+    port: 4003
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+  - name: 荷兰-V6-NL1-流量倍率:0.5
+    type: trojan
+    server: v6-nl1.nigirocloud.com
+    port: 4003
+    password: YKYu3XZYp7EUE83uyV
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true

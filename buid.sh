@@ -1,0 +1,1 @@
+docker buildx build --push --platform=linux/amd64,linux/arm64,linux/arm/v7 -t hsz1273327/clash_crontab_update:v0.0.1 -t hsz1273327/clash_crontab_update:latest .
