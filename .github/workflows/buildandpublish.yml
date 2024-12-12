@@ -5,7 +5,7 @@ on:
     types:
       - released
 jobs:
-  docker-build-vscode_cxx_env:
+  docker-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

@@ -6,7 +6,7 @@ COPY clash_crontab_update /code/clash_crontab_update/
 RUN python -m zipapp -p "/usr/bin/env python3" clash_crontab_update
 
 FROM --platform=$TARGETPLATFORM python:alpine as build_img
-COPY pip.conf /etc/pip.conf
+# COPY pip.conf /etc/pip.conf
 RUN pip --no-cache-dir install --upgrade pip
 WORKDIR /code
 COPY requirements.txt /code/requirements.txt
