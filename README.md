@@ -25,6 +25,7 @@
 | `CLASH_CRONTAB_UPDATE_CLASH_URL`         | 指定梯子给的节点更新URL                                         | 是       | ---           |
 | `CLASH_CRONTAB_UPDATE_CLASH_CONFIG_INIT` | 指定是否在程序启动时初始化配置文件,如果你已经有配置了就不用设置 | 否       | 否            |
 | `CLASH_CRONTAB_UPDATE_CLASH_CONFIG_PATH` | 指定待更新节点的配置文件路径                                    | 否       | `/config.yml` |
+| `CLASH_CRONTAB_UPDATE_UPDATE_PERIOD`     | 指定定时任务的执行时间,crontab语法                              | 否       | `0 4 * * *`   |
 
 ## 使用方式
 
