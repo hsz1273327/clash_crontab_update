@@ -5,6 +5,7 @@ from apscheduler.triggers.cron import CronTrigger
 from schema_entry import EntryPoint
 from pyloggerhelper import log
 from crontaskscheduler import CronTaskScheduler
+from version import APP_VERSION
 from tasks import update_nodes
 
 
@@ -19,7 +20,7 @@ class Application(EntryPoint):
                 "type": "string",
                 "title": "v",
                 "description": "应用版本",
-                "default": "0.0.0"
+                "default": APP_VERSION
             },
             "app_name": {
                 "type": "string",

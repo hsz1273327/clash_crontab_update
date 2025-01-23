@@ -42,10 +42,24 @@ def update_nodes(config_path: Path, clash_url: str) -> None:
         else:
             result = yaml.load(res.content)
             log.debug("task query url get config", task_name="update_nodes", url=clash_url, result=result)
-            proxies = result["proxies"]
-            dns = result["dns"]
-            config["dns"] = dns
-            config["proxies"] = proxies
+            if result.get("proxies"):
+                proxies = result["proxies"]
+                config["proxies"] = proxies
+            if result.get("dns"):
+                dns = result["dns"]
+                config["dns"] = dns
+            if result.get("proxy-groups"):
+                proxy_groups = result["proxy-groups"]
+                config["proxy-groups"] = proxy_groups
+            else:
+                if config.get("proxy-groups"):
+                    del config["proxy-groups"]
+            if result.get("rules"):
+                rules = result["rules"]
+                config["rules"] = rules
+            else:
+                if config.get("rules"):
+                    del config["rules"]
             with open(config_path, "w") as wf:
                 yaml.dump(config, wf)
     except Exception as e:
