@@ -28,7 +28,7 @@ jobs:
           # Set output parameters.
           echo ::set-output name=tags::${TAGS}
           echo ::set-output name=docker_image::${DOCKER_IMAGE}
-          echo ::set-output name=DOCKER_HUB_PWD::${secrets.DOCKER_HUB_PWD}
+          echo ::set-output name=dockerhubpwd::${{ secrets.DOCKER_HUB_PWD }}
       - name: Set up QEMU
         uses: docker/setup-qemu-action@master
         with:
