@@ -26,9 +26,9 @@ jobs:
           VERSION_LATEST="latest"
           TAGS="${DOCKER_IMAGE}:${VERSION_FULL},${DOCKER_IMAGE}:${VERSION_LATEST}"
           # Set output parameters.
-          echo ::set-output name=tags::${TAGS}
-          echo ::set-output name=docker_image::${DOCKER_IMAGE}
-          echo ::set-output name=dockerhubpwd::${{ secrets.DOCKER_HUB_PWD }}
+          echo "tags=${TAGS}" >> $GITHUB_OUTPUT
+          echo "docker_image=${DOCKER_IMAGE}" >> $GITHUB_OUTPUT
+          echo "dockerhubpwd=${{ secrets.DOCKER_HUB_PWD }}" >> $GITHUB_OUTPUT
       - name: Set up QEMU
         uses: docker/setup-qemu-action@master
         with:
